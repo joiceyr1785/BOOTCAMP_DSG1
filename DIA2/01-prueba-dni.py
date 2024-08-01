@@ -3,7 +3,7 @@ import os
 token = os.getenv("APIPERU_TOKEN") 
 print(token)
 url_dni = 'https://apiperu.dev/api/dni'
-
+url_ruc = 'https://apiperu.dev/api/ruc'
 dni = input("ingrese dni:")
 
 data_request = {
