@@ -2,7 +2,8 @@ import requests
 import os
 from decouple import config
 
-token = os.getenv("APIPERU_TOKEN") 
+#token = os.getenv("APIPERU_TOKEN") 
+token = config('APIPERU_TOKEN')
 print(token)
 url_dni = 'https://apiperu.dev/api/dni'
 
@@ -19,7 +20,7 @@ headers_request = {
 
 response = requests.post(url_dni, json=data_request, headers=headers_request)
 
-if response.status_code ==200:
+if response.status_code == 200:
     print(response.json())
 else:
     print(f"Error {response.status_code}")
